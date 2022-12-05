@@ -1,0 +1,18 @@
+求大于m的k个素数 
+#include <stdio.h>
+int main()
+{
+	int i,x,n=0,m,k;
+	scanf("%d%d",&m,&k);
+	for(x=m+1;n<k;x++)
+	{
+		for(i=2;i<x;i++)
+		if(x%i==0)break;
+		if(i==x)
+		{
+			printf("%d ",x);
+			n++;
+		}
+	}
+	return 0;
+}

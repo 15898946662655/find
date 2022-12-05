@@ -1,0 +1,27 @@
+//编写程序，验证任意偶数为两素数之和，并输出该素数
+#include <stdio.h>
+int isprime(int a)
+{
+	int i;
+	for(i=2;i<a;i++)
+	if(a%i==0)
+	return 0;
+}
+void even(int x)
+{
+	int i;
+	for(i=2;i<x/2;i++)
+	if(isprime(i))
+	if(isprime(x-1))
+	printf("%d=%d+%d\n",x,i,x-i); 
+}
+int main()
+{
+	int x;
+	scanf("%d",&x);
+	if(x%2==0)
+	even(x);
+	else
+	printf("输入的不是偶数\n");
+	return 0;
+ } 

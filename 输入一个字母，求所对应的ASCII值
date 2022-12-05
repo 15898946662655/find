@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main()
+{
+	char ch;
+	ch=getchar();
+	putchar(ch);
+	printf("\n%c对应的ASCII值为%d",ch,ch);
+	return 0;
+ } 

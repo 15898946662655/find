@@ -1,0 +1,19 @@
+//编写用递归算法求n！
+#include <stdio.h>
+double fun(int n)
+{
+	double s;
+	if(n==1) s=1;
+	else s=n*fun(n-1);
+	return s;
+ } 
+ int main()
+ {
+ 	int n;
+ 	double s;
+ 	double fun(int n);
+ 	scanf("%d",&n);
+ 	s=fun(n);
+ 	printf("s=%le\n",s);
+ 	return 0;
+ }

@@ -1,0 +1,19 @@
+//用辗转相除法求最小公倍数和最大公约数
+#include <stdio.h>
+int main()
+{
+	int n,m,r,p;
+	scanf("%d%d",&n,&m);
+	p=n*m;
+而（n%m！=0）
+	{
+		r=n%m;
+		n=m;
+		m=r;
+		r=n;
+	}
+	p/=m;
+	printf("最小公倍数为：%d",p);
+	printf("最大公约数为：%d",m);
+	return 0;
+}

@@ -1,0 +1,25 @@
+#include <stdio.h>
+void reverse(int a[10],int n)
+{
+	int i,t;
+	for(i=0;i<n/2;i++)
+	{
+		t=a[i];
+		a[i]=a[n-i-1];
+		a[n-i-1]=t;
+	}
+}
+int main()
+{
+	int a[10],i,j,t;
+	for(i=0;i<10;i++)
+	scanf("%d",&a[i]);
+	printf("original array a:\n");
+	for(i=0;i<10;i++)
+	printf("%d ",a[i]);
+	reverse(a,10);
+	printf("\narray a after reserve:\n");
+	for(i=0;i<10;i++)
+	printf("%d ",a[i]);
+	return 0;
+ } 

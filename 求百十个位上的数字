@@ -1,0 +1,14 @@
+//求一个三位数上的百位，十位，个位上的数字
+#include <stdio.h>
+int main()
+{
+	int i,hundred,ten,one;
+	scanf("%d",&i);
+	hundred=i/100;
+	ten=i/10%10;
+	one=i%10;
+	printf("百位：%d\n",hundred);
+	printf("十位：%d\n",ten);
+	printf("个位：%d\n",one); 
+	return 0;
+ } 

@@ -1,0 +1,30 @@
+//冒泡排序法排列数子，从小到大 
+//如果想要从大到小排序，把if（a[i]>a[j])中的大于号改为小于号
+#include <stdio.h>
+int main()
+{
+	int i,j,t;
+	int a[10];
+	printf("排序前：");
+	for(i=0;i<10;i++)
+	{
+		a[i]=rand()%100; 
+		printf("%d ",a[i]);
+	 } 
+	 for(i=0;i<9;i++)
+	 {
+	 	for(j=i+1;j<10;j++)
+	 	{
+	 		if(a[i]>a[j])
+	 		{
+	 			t=a[i];
+				 a[i]=a[j];
+				 a[j]=t; 
+			 }
+		 }
+	 }
+	 printf("排序后：");
+	 for(i=0;i<10;i++)
+	 printf("%d ",a[i]); 
+	return 0; 
+}

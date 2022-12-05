@@ -1,0 +1,26 @@
+//编写一个程序，输入n，m，然后输出n和m之间的所有素数到屏幕，每行显示5个素数，每列右对齐 
+#include <stdio.h>
+int main()
+{
+	int  m,n,j,x;
+	int k=0;
+	printf("输入n的值：");
+	scanf("%d",&n);
+	printf("\n");
+	printf("输入m的值：");
+	scanf("%d",&m);
+	printf("\n"); 
+	for(x=n+1;x<m;x++)
+	{
+		for(j=2;j<x;j++)
+		if(x%j==0)break;
+		if(j==x)
+		{
+			printf("%d ",x);
+			k++;
+			if(k%5==0)
+			printf("\n");
+		}
+	}
+	return 0;
+ } 

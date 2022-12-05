@@ -1,0 +1,22 @@
+//编写一个求x的y次方的函数，main函数中调用fun函数
+#include <stdio.h>
+double fun(double x,int y)
+{
+	int k=1;
+	double z=1;
+	for(k=1;k<=y;k++)
+	{
+		z=z*x;
+	}
+	return z;
+}
+int main()
+{
+	double i,z;
+	int j;
+	scanf("%lf%d",&i,&j);
+	z=fun(i,j);
+	printf("%lf",z);
+	
+	return 0;
+}

@@ -1,0 +1,31 @@
+//用选择排序法排列十个数 
+#include <stdio.h>
+#define N 10
+int main()
+{
+	int a[N],i,t,j,min;
+	printf("排序前：");
+	for(i=0;i<10;i++)
+	{
+		a[i]=rand()%100;
+		printf("%d ",a[i]);
+	 } 
+	 for(i=0;i<9;i++)
+	 {
+	 	min=i;
+	 	for(j=i+1;j<10;j++)
+	 		if(a[min]>a[j])
+	 		min=j;
+        if(min!=i)
+        {
+        	t=a[min];
+        	a[min]=a[i];
+        	a[i]=t;
+		}
+	 }
+	 printf("排序后：");
+	 for(i=0;i<N;i++)
+	 printf("%d ",a[i]);
+	  
+	return 0; 
+}

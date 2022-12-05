@@ -1,0 +1,19 @@
+//调用函数，每调用一次函数，num的值增加1
+#include <stdio.h>
+void Add(int* p)
+{
+	(*p)++;
+}
+int main()
+{
+	int num=0;
+	Add(&num);
+	printf("%d ",num);
+	Add(&num);
+	printf("%d ",num);
+	Add(&num);
+	printf("%d ",num);
+	Add(&num);
+	printf("%d ",num);
+	return 0;
+}

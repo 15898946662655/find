@@ -1,0 +1,40 @@
+//编写N个字符串，按字符串长短排序 
+#include <stdio.h>
+#include <string.h>
+#define N 5
+int main()
+{
+	char a[N][20],t[20];
+	int j,min,i;
+    printf("输入N个字符串：\n");
+    	for(i=0;i<N;i++)
+    	{
+    		gets(a[i]);
+		}
+	printf("排序前：");
+	for(i=0;i<N;i++)
+	{
+	puts(a[i]);
+	 } 
+	 for(i=0;i<N-1;i++)
+	 {
+	 	min=i;
+	 	for(j=i+1;j<N;j++)
+	 	{
+	 		if(strlen(a[min])>strlen(a[j]))
+	 		min=j;
+	 		if(min!=i)
+	 		{
+	 			strcpy(t,a[min]);
+	 			strcpy(a[min],a[i]);
+	 			strcpy(a[i],t);
+			 }
+		 }
+	 }
+	 printf("排序后：");
+	 for(i=0;i<N;i++)
+	 {
+	 	puts(a[i]);
+	  } 
+	return 0;
+} 

@@ -1,0 +1,22 @@
+//编写函数，实现字符串ASCII码大小比较 
+#include <stdio.h>
+#include <string.h>
+int strcomp(char a[],char b[])
+{
+	int i;
+	for(i=0;a[i]==b[i]&&a[i]!='\0';i++);
+	return a[i]-b[i];
+}
+int main()
+{
+	char a[20],b[20]; 
+	gets(a);
+	gets(b);
+	if(strcomp(a,b)>0)
+	puts(a);
+	else if(strcomp(a,b)<0)
+	puts(b);
+	else 
+	printf("a==b\n");
+	return 0;
+}

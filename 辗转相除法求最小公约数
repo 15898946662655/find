@@ -1,0 +1,16 @@
+//辗转相除法求最小公约数
+#include <stdio.h>
+int main()
+{
+	int i,j,t;
+	scanf("%d%d",&i,&j);
+	while(i%j!=0)
+	{
+		t=i%j;
+		i=j;
+		j=t;
+		t=i;
+	}
+	printf("最小公约数为：%d",j);
+	return 0;
+}

@@ -1,0 +1,39 @@
+//编写1000-2000年的闰年年数 （方法一） 
+#include <stdio.h>
+int main()
+{
+	int year=0;
+	for(year=1000;year<=2000;year++)
+	{
+		if(year%4==0&&year%100!=0)
+		printf("%d ",year);
+		else if(year%400==0)
+		printf("%d ",year);
+	}
+	return 0;
+ } 
+ 
+ 
+ 
+ 
+ 用函数的方法（方法二）
+ #include <stdio.h>
+int isleap(int n)
+{
+	if((n%4==0&&n%100!=0)||(n%400==0))
+	return 1;
+	else
+	return 0;
+}
+int main()
+{
+	int year=0;
+	for(year=1000;year<=2000;year++)
+	{
+		if(isleap(year)==1)
+		printf("%d ",year);
+	}
+	return 0;
+	
+ } 
+ //函数部分有返回值的，尽量分两类，一个return 1；一个return 0

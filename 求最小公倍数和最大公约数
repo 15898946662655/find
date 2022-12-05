@@ -1,0 +1,23 @@
+//这个不是用辗转相除法求的最大公约数和最小公倍数
+#include <stdio.h>
+int main()
+{
+	int n,m,i,t,min,max;//max为最大公约数，min为最小公倍数
+	scanf("%d%d",&n,&m);
+	if(n>m)
+	{
+		t=n;
+		n=m;
+		m=t;
+		
+	 } 
+	 for(i=1;i<=n;i++)
+	 {
+	 	if(m%i==0&&n%i==0)
+	 	max=i;
+	 	min=m*n/i;
+	 }
+	 printf("最大公约数为：%d",max);
+	 printf("最小公倍数为：%d",min);
+	 return 0;
+ } 
